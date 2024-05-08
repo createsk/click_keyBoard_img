@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Simulator</title>
+    <link rel="stylesheet" href="mainKeyBoard.css">
+    
+</head>
+
+<body>
+    <h1>カスタマイズキーボード</h1>
+    <p>現在のモード:<span id="mode">ローマ字入力</span></p>
+
+    <!-- 入力タイプ切り替え -->
+    <button onclick="toggleRoma()">ローマ字入力</button>
+    <button onclick="toggleuppercaseRoma()">ローマ字入力(大文字)</button>
+    <button onclick="toggleHiragana()">日本語入力</button>
+
+
+    <!-- <p id="pTop">
+        shiftキーの仕様<br>
+        shiftボタンを二回連続クリックし、他のキーを押すと、
+       <br> (shiftを押しながらキーを押している判定になります)
+    </p> -->
+  
+    <!-- 入力タイプ説明画像(右上) -->
+    <img id="inputTypeImg" src="img/入力タイプ切り替え.jpg" alt="">
+
+    <!-- キーボードで打った文字の追加先 -->
+        <div id="textField"></div>
+  
+        
+
+
+    <div id="keyboard">
+        <!-- キーボードの画像 -->
+        <!-- usemapには、map関数のnameを入力している -->
+        <img src="/img/keyboard_Gray.png" id="keyboardImg" alt="Keyboard" usemap="#keyboardMap">
+
+        <map name="keyboardMap" id="keyboardMap">
+
+            <area shape="rect" coords="132px,193px,176px,239px" onclick="typeCharacter('a','A')">
+            <area shape="rect" coords="373px,249px,417px,292px" onclick="typeCharacter('b')">
+            <area shape="rect" coords="265px,248px,309px,296px" onclick="typeCharacter('c')">
+            <area shape="rect" coords="243px,194px,285px,240px" onclick="typeCharacter('d')">
+            <area shape="rect" coords="227px,134px,268px,181px" onclick="typeCharacter('e')">
+            <area shape="rect" coords="296px,195px,342px,237px" onclick="typeCharacter('f')">
+            <area shape="rect" coords="352px,195px,393px,238px" onclick="typeCharacter('g')">
+            <area shape="rect" coords="405px,195px,451px,237px" onclick="typeCharacter('h')">
+            <area shape="rect" coords="499px,137px,541px,181px" onclick="typeCharacter('i')">
+            <area shape="rect" coords="462px,195px,502px,240px" onclick="typeCharacter('j')">
+            <area shape="rect" coords="515px,195px,556px,238px" onclick="typeCharacter('k')">
+            <area shape="rect" coords="568px,193px,613px,239px" onclick="typeCharacter('l')">
+            <area shape="rect" coords="484px,250px,527px,296px" onclick="typeCharacter('m')">
+            <area shape="rect" coords="445px,137px,486px,182px" onclick="typeCharacter('u')"><!-- aaa -->
+            <area shape="rect" coords="553px,138px,596px,183px" onclick="typeCharacter('o')">
+            <area shape="rect" coords="607px,138px,652px,186px" onclick="typeCharacter('p')">
+            <area shape="rect" coords="119px,139px,160px,181px" onclick="typeCharacter('q')">
+            <area shape="rect" coords="280px,138px,324px,182px" onclick="typeCharacter('r')">
+            <area shape="rect" coords="188px,193px,230px,240px" onclick="typeCharacter('s')">
+            <area shape="rect" coords="337px,138px,380px,184px" onclick="typeCharacter('t')">
+            <area shape="rect" coords="430px,248px,469px,295px" onclick="typeCharacter('n')"> <!-- aaa -->
+            <area shape="rect" coords="318px,249px,364px,293px" onclick="typeCharacter('v')">
+            <area shape="rect" coords="172px,137px,216px,180px" onclick="typeCharacter('w')">
+            <area shape="rect" coords="213px,252px,253px,297px" onclick="typeCharacter('x')">
+            <area shape="rect" coords="390px,138px,433px,180px" onclick="typeCharacter('y')">
+            <area shape="rect" coords="156px,251px,200px,292px" onclick="typeCharacter('z')">
+
+
+        </map>
+
+        <!-- 他のキーも同様に追加 -->
+        </map>
+    </div>
+
+
+
+    <script src="mainKeyBoard.js"></script>
+</body>
+
+</html>

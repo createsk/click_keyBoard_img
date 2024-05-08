@@ -1,0 +1,43 @@
+
+
+
+
+#pTop {
+    max-width: 300px;
+
+white-space: normal;
+}
+
+
+#mode {
+    font-size: 1.2rem;
+    color: blue;
+}
+#inputTypeImg { /* */
+    margin-top: 10px;
+    height: 90px;
+    position: absolute;
+    top: 0%; right:0%
+}
+
+#keyboardImg {
+    position: absolute;
+    top: 72%; left:50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+
+#textField {
+    font-size: 29px;
+    width: 650px;
+   
+    word-wrap: break-word; /* 文字がはみ出た時のルールを文字送りに指定 */
+    position: absolute;
+    top:30%; left:50%;
+    transform: translate(-50%,-50%);
+}
+
+img {
+    user-select: none;
+}
