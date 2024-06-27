@@ -43,6 +43,7 @@ function typeCharacter(character, character1) {
 
         // textFiledのプロパティ
         const textLength = textField.innerHTML.length;
+        const lastThreeChars = textField.innerHTML.slice(textLength-3 );
         const lastTwoChars = textField.innerHTML.slice(textLength - 2);
         const lastOneChars = textField.innerHTML.slice(textLength - 1);
 
@@ -57,7 +58,26 @@ function typeCharacter(character, character1) {
             "ma": "ま", "mi": "み", "mu": "む", "me": "め", "mo": "も",
             "ya": "や", "yu": "ゆ", "yo": "よ",
             "ra": "ら", "ri": "り", "ru": "る", "re": "れ", "ro": "ろ",
-            "wa": "わ", "wo": "を", "n": "ん"
+            "wa": "わ", "wi": "うぃ", "wu": "う", "we": "うぇ", "wo": "を", "n": "ん",
+            "va": "ヴぁ", "vi": "ヴぃ", "vu": "ヴ", "ve": "ヴぇ", "vo": "ヴぉ",
+            "ca": "か", "ci": "し", "cu": "く", "ce": "せ", "co": "こ", 
+            "fa": "ふぁ", "fi": "ふぃ", "fu": "ふ", "fe": "ふぇ", "fo": "ふぉ", 
+            "qa": "くぁ", "qi": "くぃ", "qu": "く", "qe": "くぇ", "qo": "くぉ", 
+            "ja": "じゃ", "ji": "じ", "ju": "じゅ","じ": "ji", "jo": "じょ",
+
+
+            "za": "ざ", "zi": "じ",
+            "zu": "ず", "ze": "ぜ", "zo": "ぞ",
+            "da": "だ", "di": "ぢ", "du": "づ", "de": "で", "do": "ど",
+            "ba": "ば", "bi": "び", "bu": "ぶ", "be": "べ", "bo": "ぼ",
+            "ga": "が", "gi": "ぎ", "gu": "ぐ", "ge": "げ", "go": "ご",
+
+            "la": "ぁ","li": "ぃ","lu": "ぅ","le": "ぇ","lo": "ぉ",
+
+            "xa": "ぁ", "xi": "ぃ", "xu": "ぅ", "xe": "ぇ", "xo": "ぉ",
+
+            "nn": "ん", "xn": "ん",
+
 
             // 追加したいひらがなのパターンと対応するひらがなを追加
         };
@@ -66,22 +86,45 @@ function typeCharacter(character, character1) {
             "a": "あ", "i": "い", "u": "う", "e": "え", "o": "お",
         }
 
+        const lowercaseLetter = {
+            "kya": "きゃ", "kyi": "きぃ", "kyu": "きゅ", "kye": "きぇ", "kyo": "きょ",
+            "sha": "しゃ", "shi": "し",  "shu": "しゅ", "she":"しぇ", "sho": "しょ",
+            "cha": "ちゃ", "chi":"ち", "chu": "ちゅ", "che": "ちぇ", "cho": "ちょ",
+            "nya": "にゃ", "nyi": "にぃ", "nyu": "にゅ", "nye" :"にぇ", "nyo": "にょ",
+            "hya": "ひゃ", "hyi": "ひぃ", "hyu": "ひゅ", "hye": "ひぇ", "hyo": "ひょ",
+            "mya": "みゃ", "myi": "みぃ", "myu": "みゅ", "mye": "みぇ", "myo": "みょ",
+            "rya": "りゃ", "ryi": "りぃ", "ryu": "りゅ", "rye": "りぇ", "ryo": "りょ",
+            "gya": "ぎゃ", "gyi": "ぎぃ", "gyu": "ぎゅ", "gye": "ぎぇ", "gyo": "ぎょ",
+
+            "zya": "じゃ", "zyi": "じぃ", "zyu": "じゅ", "zye": "じぇ", "zyo": "じょ",
+            "bya": "びゃ", "byi": "びぃ", "byu": "びゅ", "bye": "びぇ", "byo": "びょ",
+            "pya": "ぴゃ", "pyi": "ぴぃ", "pyu": "ぴゅ", "pye": "ぴぇ", "pyo": "ぴょ",
+
+            
+            "tha": "てゃ", "thi": "てぃ", "thu": "てゅ", "the": "てぇ", "tho": "てょ",
+            "dha": "でゃ", "dhi": "でぃ", "dhu": "でゅ", "dhe": "でぇ", "dho": "でょ",
+            "ltu": "っ","lya": "ゃ","lyu": "ゅ","lyo": "ょ", "lwa": "ゎ",
+            "xtu": "っ", "xya": "ゃ", "xyu": "ゅ", "xyo": "ょ", "xwa": "ゎ",
+
+        };
 
 
         // "bba" の場合の処理
-        if (textLength >= 3 && textField.innerHTML.slice(textLength - 3) === "bba") {
+        if ( lastThreeChars in lowercaseLetter) {
 
             removeC();
-            textField.innerHTML += "っば";
+            textField.innerHTML += lowercaseLetter[lastThreeChars];
         }
 
         else if (lastTwoChars in hiraganaMap) {
+
             removeB();
             textField.innerHTML += hiraganaMap[lastTwoChars];
         }
 
 
         else if (lastOneChars in aiueoMap) {
+
             removeA()
             textField.innerHTML += aiueoMap[lastOneChars]
         }
