@@ -11,73 +11,68 @@
 </head>
 
 <body>
-    
-    <!-- to commit -->
-    <h1>カスタマイズキーボード</h1>
-    <p>現在のモード:<span id="mode">ローマ字入力</span></p>
 
-    <!-- 入力タイプ切り替え -->
-    <button onclick="toggleRoma()">ローマ字入力</button>
+
+    
+<header>
+
+    <h1>カスタマイズキーボード</h1>
+    <p>現在のモード:<span id="mode">ローマ字入力</span></p> 
+
+   <button onclick="toggleRoma()">ローマ字入力</button>
     <button onclick="toggleuppercaseRoma()">ローマ字入力(大文字)</button>
     <button onclick="toggleHiragana()">日本語入力</button>
+</header>
 
 
-    <!-- <p id="pTop">
-        shiftキーの仕様<br>
-        shiftボタンを二回連続クリックし、他のキーを押すと、
-       <br> (shiftを押しながらキーを押している判定になります)
-    </p> -->
-  
-    <!-- 入力タイプ説明画像(右上) -->
-    <img id="inputTypeImg" src="img/入力タイプ切り替え.jpg" alt="">
+
 
     <!-- キーボードで打った文字の追加先 -->
-        <div id="textField"></div>
+
+    <div class="center Tfield">
+        <div id="textFieldWrapper">
+            <p id="textField">aaaaa</p>
+        </div>
+    </div>
+
   
-        
+        <div class="center">
+            <div class="keyImgWrapper">
+                <img src="img/keyboard_Gray.png" id="keyImg" alt="Keyboard" usemap="#keyboardMap">
+            </div>
+        </div>
 
 
-    <div id="keyboard">
-        <!-- キーボードの画像 -->
-        <!-- usemapには、map関数のnameを入力している -->
-        <img src="img/keyboard_Gray.png" id="keyboardImg" alt="Keyboard" usemap="#keyboardMap">
-
+ 
         <map name="keyboardMap" id="keyboardMap">
 
-<area shape="rect" coords="132px,193px,176px,239px" onclick="typeCharacter('a','A')">
-<area shape="rect" coords="374px,249px,417px,295px" onclick="typeCharacter('b','B')">
-<area shape="rect" coords="265px,248px,309px,296px" onclick="typeCharacter('c','C')">
-<area shape="rect" coords="243px,194px,285px,240px" onclick="typeCharacter('d','D')">
-<area shape="rect" coords="227px,134px,268px,181px" onclick="typeCharacter('e','E')">
-<area shape="rect" coords="296px,195px,342px,237px" onclick="typeCharacter('f','F')">
-<area shape="rect" coords="352px,195px,393px,238px" onclick="typeCharacter('g','G')">
-<area shape="rect" coords="405px,195px,451px,237px" onclick="typeCharacter('h','H')">
-<area shape="rect" coords="499px,137px,541px,181px" onclick="typeCharacter('i','I')">
-<area shape="rect" coords="462px,195px,502px,240px" onclick="typeCharacter('j','J')">
-<area shape="rect" coords="515px,195px,556px,238px" onclick="typeCharacter('k','K')">
-<area shape="rect" coords="568px,193px,613px,239px" onclick="typeCharacter('l','L')">
-<area shape="rect" coords="484px,250px,527px,296px" onclick="typeCharacter('m','M')">
-<area shape="rect" coords="445px,137px,486px,182px" onclick="typeCharacter('u','U')"><!-- aaa -->
-<area shape="rect" coords="553px,138px,596px,183px" onclick="typeCharacter('o','O')">
-<area shape="rect" coords="607px,138px,652px,186px" onclick="typeCharacter('p','P')">
-<area shape="rect" coords="119px,139px,160px,181px" onclick="typeCharacter('q','Q')">
-<area shape="rect" coords="280px,138px,324px,182px" onclick="typeCharacter('r','R')">
-<area shape="rect" coords="188px,193px,230px,240px" onclick="typeCharacter('s','S')">
-<area shape="rect" coords="337px,138px,380px,184px" onclick="typeCharacter('t','T')">
-<area shape="rect" coords="430px,248px,469px,295px" onclick="typeCharacter('n','N')"> <!-- aaa -->
-<area shape="rect" coords="318px,249px,364px,293px" onclick="typeCharacter('v','V')">
-<area shape="rect" coords="172px,137px,216px,180px" onclick="typeCharacter('w','W')">
-<area shape="rect" coords="213px,252px,253px,297px" onclick="typeCharacter('x','X')">
-<area shape="rect" coords="390px,138px,433px,180px" onclick="typeCharacter('y','Y')">
-<area shape="rect" coords="156px,251px,200px,292px" onclick="typeCharacter('z','Z')">
-
-
-
-        </map>
-
-        <!-- 他のキーも同様に追加 -->
-        </map>
-    </div>
+            <area shape="rect" coords="132px,193px,176px,239px" onclick="typeCharacter('a','A')">
+            <area shape="rect" coords="374px,249px,417px,295px" onclick="typeCharacter('b','B')">
+            <area shape="rect" coords="265px,248px,309px,296px" onclick="typeCharacter('c','C')">
+            <area shape="rect" coords="243px,194px,285px,240px" onclick="typeCharacter('d','D')">
+            <area shape="rect" coords="227px,134px,268px,181px" onclick="typeCharacter('e','E')">
+            <area shape="rect" coords="296px,195px,342px,237px" onclick="typeCharacter('f','F')">
+            <area shape="rect" coords="352px,195px,393px,238px" onclick="typeCharacter('g','G')">
+            <area shape="rect" coords="405px,195px,451px,237px" onclick="typeCharacter('h','H')">
+            <area shape="rect" coords="499px,137px,541px,181px" onclick="typeCharacter('i','I')">
+            <area shape="rect" coords="462px,195px,502px,240px" onclick="typeCharacter('j','J')">
+            <area shape="rect" coords="515px,195px,556px,238px" onclick="typeCharacter('k','K')">
+            <area shape="rect" coords="568px,193px,613px,239px" onclick="typeCharacter('l','L')">
+            <area shape="rect" coords="484px,250px,527px,296px" onclick="typeCharacter('m','M')">
+            <area shape="rect" coords="445px,137px,486px,182px" onclick="typeCharacter('u','U')"><!-- aaa -->
+            <area shape="rect" coords="553px,138px,596px,183px" onclick="typeCharacter('o','O')">
+            <area shape="rect" coords="607px,138px,652px,186px" onclick="typeCharacter('p','P')">
+            <area shape="rect" coords="119px,139px,160px,181px" onclick="typeCharacter('q','Q')">
+            <area shape="rect" coords="280px,138px,324px,182px" onclick="typeCharacter('r','R')">
+            <area shape="rect" coords="188px,193px,230px,240px" onclick="typeCharacter('s','S')">
+            <area shape="rect" coords="337px,138px,380px,184px" onclick="typeCharacter('t','T')">
+            <area shape="rect" coords="430px,248px,469px,295px" onclick="typeCharacter('n','N')"> <!-- aaa -->
+            <area shape="rect" coords="318px,249px,364px,293px" onclick="typeCharacter('v','V')">
+            <area shape="rect" coords="172px,137px,216px,180px" onclick="typeCharacter('w','W')">
+            <area shape="rect" coords="213px,252px,253px,297px" onclick="typeCharacter('x','X')">
+            <area shape="rect" coords="390px,138px,433px,180px" onclick="typeCharacter('y','Y')">
+            <area shape="rect" coords="156px,251px,200px,292px" onclick="typeCharacter('z','Z')">
+            
 
 
 
